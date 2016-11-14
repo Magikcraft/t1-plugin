@@ -26,8 +26,15 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
-    <finalName>mct1</finalName>
+      <finalName>mct1</finalName>
+      <resources>
+          <resource>
+              <directory>src/resources</directory>
+              <includes>
+                  <include>plugin.yml</include>
+              </includes>
+          </resource>
+      </resources>
   </build>
 </project>
