@@ -4,5 +4,9 @@
         "repo": "t1-plugin-artifact/t1-plugin",
         "desc": "auto deploy from travis",
         "subject": "kylelt"
-    }
+    },
+    "files": [
+        {"includePattern": "target/mct1.jar", "uploadPattern":"mct1.jar", "matrixParams": { "override": true}}
+    ],
+    "update": true
 }
