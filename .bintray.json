@@ -5,6 +5,10 @@
         "desc": "auto deploy from travis",
         "subject": "kylelt"
     },
+    "version":{
+        "name": "development",
+        "desc": "this is a version"
+    },
     "files": [
         {"includePattern": "target/mct1.jar", "uploadPattern":"mct1.jar", "matrixParams": { "override": true}}
     ],
