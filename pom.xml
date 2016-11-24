@@ -6,6 +6,7 @@
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>t1</name>
+
   <repositories>
     <repository>
     <id>destroystokyo-repo</id>
@@ -37,4 +38,11 @@
           </resource>
       </resources>
   </build>
+  <distributionManagement>
+      <repository>
+          <id>bintray-kylelt-t1-plugin-artifact</id>
+          <name>kylelt-t1-plugin-artifact</name>
+          <url>https://api.bintray.com/maven/kylelt/t1-plugin-artifact/development/;publish=1</url>
+      </repository>
+  </distributionManagement>
 </project>
