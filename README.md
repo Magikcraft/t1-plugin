@@ -1,3 +1,5 @@
+![t1-plugin build status](https://travis-ci.org/Magikcraft/t1-plugin.svg?branch=master)
+
 # t1-plugin
 
 Source code for the functionality of the mct1 initiative. This repository
