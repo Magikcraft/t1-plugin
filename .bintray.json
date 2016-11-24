@@ -12,5 +12,5 @@
     "files": [
         {"includePattern": "target/mct1.jar", "uploadPattern":"mct1.jar", "matrixParams": { "override": true}}
     ],
-    "update": true
+    "publish": true
 }
