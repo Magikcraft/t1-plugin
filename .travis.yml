@@ -16,4 +16,4 @@ deploy:
   key:
     secure: FOoBWA58WFdtb+P+cJ4npYBCIMaxovzOmsPTxMTo2TYVrzllgc29TeOZuD/oL/0jwJi80z/saaKEK2TxtiiyrhsxxUjVCDRHixcH419NpqMDGrBBGgVqnCxJ5Va7h5p8HVu91EPMfy2znX19YN7GSM87TX9RECS19yhg4c7nhDqD/ZOnx/k0qWcZz/JvcY5HV3mQdJvB4r8EfdP2twVPBKpgv+HFra3kK+65VEtt6MlxMTUN7X6Gtyfe+8udluuTnYAnfuqJJeJlh5VYbebIPpFgsjxK4WpxjyS+gt8nYpl4Oay53d6MvN4L2HaOzj5walCn6aAH6SNHpthBiy6NtGNgYSQ73RBnxMdLWJiER0tiCY3jOfbvL1p94pmIdh4CJsboh89IqQc+rHv8e3xcKUslfTMDLCCjTqkJSf6rctK2MlfEyT4KC/l7ZzC9XMD7FeLfR8Z14NHuTBwPe8IpE2tr67RpoGeIpuVVYlERWgImQlJAe736Jy7iS4/YUU/Fuj42vePSGD6ZHi2nva8d/XEXaElOy6+eer88CFvCZDfvIjFgZ349v7byiiwlqaMhKFHOgRd0x1CrOHXczTvaUC4ktcwoxwPpInBC6bJ4Z9N4wclF7i/L8NDArbYr9x0cpSgRvdt9hk/2rNVODr1bl/caXHuxHMuq7y/9A566vvw=
 after_deploy:
-    - curl --request POST --url $DEPLOY_URL
+    - curl --verbose --request POST --url $DEPLOY_URL
