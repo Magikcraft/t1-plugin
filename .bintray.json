@@ -1,6 +1,6 @@
 {
     "package": {
-        "name": "development",
+        "name": "t1-plugin",
         "repo": "t1-plugin-artifact/t1-plugin",
         "desc": "auto deploy from travis",
         "subject": "kylelt"
