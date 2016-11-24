@@ -1,3 +1,7 @@
+cache:
+    directories:
+        - .autoconf
+        - $HOME/m2
 language: java
 jdk:
 - oraclejdk8
