@@ -10,7 +10,7 @@
         "desc": "this is a version"
     },
     "files": [
-        {"includePattern": "target/mct1.jar", "uploadPattern":"mct1.jar", "matrixParams": { "override": true}}
+        {"includePattern": "target/mct1.jar", "uploadPattern":"mct1.jar", "matrixParams": { "override": 1}}
     ],
     "publish": true
 }
