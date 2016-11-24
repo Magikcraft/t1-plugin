@@ -8,6 +8,7 @@ notifications:
 deploy:
   on:
       all_branches: true
+  file: .bintray.json
   provider: bintray
   user: kylelt
   key:
