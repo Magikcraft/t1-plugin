@@ -6,6 +6,8 @@ script:
 notifications:
   email: false
 deploy:
+  on:
+      all_branches: true
   provider: bintray
   user: kylelt
   key:
