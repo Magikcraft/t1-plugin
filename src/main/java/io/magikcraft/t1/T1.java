@@ -1,23 +1,22 @@
 package io.magikcraft.t1;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import io.magikcraft.t1.command.HelloWorldCommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  * Hello world!
  *
  */
-public class T1 extends JavaPlugin
+public class
+T1 extends JavaPlugin
 {
-    @Override
+@Override
     public void onEnable()
     {
         this.getCommand("hw").setExecutor(new HelloWorldCommandExecutor());
     }
 
-    @Override
+@Override
     public void onDisable(){}
 
 }

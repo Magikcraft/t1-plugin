@@ -1,4 +1,4 @@
-package io.magikcraft.t1;
+package io.magikcraft.t1.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
