@@ -1,7 +1,29 @@
 package io.magikcraft.t1.state;
 
-/**
- * Created by forward on 1/27/17.
- */
-public class T1StateChangeEvent {
+import com.google.gson.JsonObject;
+import org.bukkit.event.Event;
+import org.bukkit.event.HandlerList;
+
+public class T1StateChangeEvent extends Event{
+
+    private JsonObject before;
+    private T1State state;
+
+    public T1StateChangeEvent(JsonObject before, T1State state){
+        this.before = before;
+        this.state = state;
+    }
+
+    public JsonObject getBefore() {
+        return this.before;
+    }
+
+    public T1State getState(){
+        return this.state;
+    }
+
+    @Override
+    public HandlerList getHandlers() {
+        return null;
+    }
 }
