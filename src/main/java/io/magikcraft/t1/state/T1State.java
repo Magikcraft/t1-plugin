@@ -26,7 +26,7 @@ public class T1State
         }
     }
 
-    public double setBgl(double bgl)
+    public void setBgl(double bgl)
     {
         JsonObject before = this.toJSON();
         this.bgl = bgl;
