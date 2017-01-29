@@ -13,7 +13,6 @@ public class T1State
 
     private Player minecraftPlayer;
     private Server minecraftServer;
-    private Plugin plugin;
     private double bgl;
     private double insulin;
     public T1State(JsonObject jsonObject, Server minecraftServer, Plugin plugin)
@@ -21,16 +20,15 @@ public class T1State
         if (null != jsonObject.get("t1PlayerName") || null != jsonObject.get("t1PlayerUUID") ) {
             this.bgl = jsonObject.get("bgl").getAsDouble();
             this.minecraftServer = minecraftServer;
-            this.plugin = plugin;
 
         }
     }
 
-    public void setBgl(double bgl)
+    public void setBGL(double bgl)
     {
         JsonObject before = this.toJSON();
         this.bgl = bgl;
-        minecraftServer.getPluginManager().callEvent(new T1StateChangeEvent(before,this);
+        minecraftServer.getPluginManager().callEvent(new T1StateChangeEvent(before,this));
     }
 
 
