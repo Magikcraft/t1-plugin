@@ -20,7 +20,6 @@ public class T1State
         if (null != jsonObject.get("t1PlayerName") || null != jsonObject.get("t1PlayerUUID") ) {
             this.bgl = jsonObject.get("bgl").getAsDouble();
             this.minecraftServer = minecraftServer;
-
         }
     }
 
