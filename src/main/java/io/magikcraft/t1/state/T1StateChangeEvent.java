@@ -6,16 +6,10 @@ import org.bukkit.event.HandlerList;
 
 public class T1StateChangeEvent extends Event{
 
-    private JsonObject before;
     private T1State state;
 
-    public T1StateChangeEvent(JsonObject before, T1State state){
-        this.before = before;
+    public T1StateChangeEvent(T1State after){
         this.state = state;
-    }
-
-    public JsonObject getBefore() {
-        return this.before;
     }
 
     public T1State getState(){

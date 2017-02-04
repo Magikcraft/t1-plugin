@@ -1,52 +1,60 @@
 package io.magikcraft.t1.state;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import org.bukkit.Server;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
+import com.google.api.client.json.GenericJson;
+import com.google.api.client.util.Key;
+//import com.google.gson.Gson;
+//import com.google.gson.GsonBuilder;
+//import com.google.gson.JsonElement;
+//import com.google.gson.JsonObject;
+//import org.bukkit.Bukkit;
+//import org.bukkit.Server;
+//import org.bukkit.entity.Player;
+//import org.bukkit.plugin.Plugin;
+//import org.bukkit.plugin.PluginManager;
+//import com.google.api.client.json.JsonFactory;
+//import java.util.UUID;
 
-public class T1State
-{
+public class T1State extends GenericJson{
+    @Key("minecraft_player_name")
+    private String minecraftPlayerName;
 
-    private Player minecraftPlayer;
-    private Server minecraftServer;
+    @Key
     private double bgl;
+
+    @Key
     private double insulin;
-    public T1State(JsonObject jsonObject, Server minecraftServer, Plugin plugin)
-    {
-        if (null != jsonObject.get("t1PlayerName") || null != jsonObject.get("t1PlayerUUID") ) {
-            this.bgl = jsonObject.get("bgl").getAsDouble();
-            this.minecraftServer = minecraftServer;
-        }
+
+    public String getMinecraftPlayerName() {
+        return minecraftPlayerName;
     }
 
-    public void setBGL(double bgl)
-    {
-        JsonObject before = this.toJSON();
+    public void setMinecraftPlayerName(String minecraftPlayerName) {
+        this.minecraftPlayerName = minecraftPlayerName;
+    }
+
+    public double getBgl() {
+        return bgl;
+    }
+
+    public void setBgl(double bgl) {
         this.bgl = bgl;
-        minecraftServer.getPluginManager().callEvent(new T1StateChangeEvent(before,this));
     }
 
+    public double getInsulin() {
+        return insulin;
+    }
 
-    public T1State(Player minecraftPlayer)
-    {
-        this.minecraftPlayer = minecraftPlayer;
+    public void setInsulin(double insulin) {
+        this.insulin = insulin;
+    }
+
+    public T1State() {
+        this.minecraftPlayerName = null;
         this.bgl = 0.0;
         this.insulin = 0.0;
     }
 
-    public JsonObject toJSON()
-    {
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("t1PlayerName", minecraftPlayer.getName());
-        jsonObject.addProperty("t1PlayerUUID", minecraftPlayer.getUniqueId().toString());
-        jsonObject.addProperty("bgl", bgl);
-        jsonObject.addProperty("insulin", insulin);
-
-        return jsonObject;
+    public T1State clone(){
+        return (T1State) super.clone();
     }
-
 }
