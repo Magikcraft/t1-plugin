@@ -3,10 +3,8 @@ package io.magikcraft.t1;
 import io.magikcraft.t1.command.EatCommandExecutor;
 import io.magikcraft.t1.command.TakeCommandExecutor;
 import io.magikcraft.t1.state.T1StateManager;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
 
 
 public class T1 extends JavaPlugin {
@@ -25,7 +23,7 @@ public class T1 extends JavaPlugin {
                 stateManager.update();
             }
         };
-        
+
         t1StateUpdateScheduler.runTaskTimer(this,1, 300);
     }
 
