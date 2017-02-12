@@ -1,8 +1,5 @@
 package io.magikcraft.t1.state;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
@@ -26,7 +23,7 @@ public class T1State
         }
     }
 
-    public double setBgl(double bgl)
+    public void setBgl(double bgl)
     {
         JsonObject before = this.toJSON();
         this.bgl = bgl;
