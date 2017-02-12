@@ -13,6 +13,7 @@ public class T1State
     private Plugin plugin;
 
     private BGLType bgl;
+
     private double insulinUnitsOnBoard;
     private double carbsOnBoard;
 
@@ -32,6 +33,7 @@ public class T1State
     public T1State(Player minecraftPlayer)
     {
         this.minecraftPlayer = minecraftPlayer;
+
         this.bgl = new BGLType(6, mmolL);
 
         this.insulinUnitsOnBoard = 0.0;
@@ -43,7 +45,7 @@ public class T1State
     public void setBgl(double bgl)
     {
         JsonObject before = this.toJSON();
-        this.blg
+        this.blg.setBGL(bgl);
         minecraftServer.getPluginManager().callEvent(new T1StateChangeEvent(before,this));
     }
 

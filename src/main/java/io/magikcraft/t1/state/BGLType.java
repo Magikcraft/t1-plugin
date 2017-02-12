@@ -12,6 +12,12 @@ public class BGLType {
         setBGL(initialBGL);
     }
 
+
+    public setMeasurementType(BGLMeasurementEnum bglm)
+    {
+        this.bglm = bglm;
+    }
+
     public double getBGL()
     {
         switch (bglm) 
@@ -34,6 +40,7 @@ public class BGLType {
                 this.bgl = newBGL / conversionRate;
         }
     }
+    
     public enum BGLMeasurementEnum { mmolL, mgdL }  
 
 }
