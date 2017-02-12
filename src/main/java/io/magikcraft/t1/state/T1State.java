@@ -30,7 +30,7 @@ public class T1State
     {
         JsonObject before = this.toJSON();
         this.bgl = bgl;
-        minecraftServer.getPluginManager().callEvent(new T1StateChangeEvent(before,this);
+        minecraftServer.getPluginManager().callEvent(new T1StateChangeEvent(before,this));
     }
 
 
