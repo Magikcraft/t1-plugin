@@ -1,29 +1,37 @@
 public class BGLType {
     //store the BGL internally as mmol/L
     private double bgl;
+    private BGLMeasurementEnum bglm;
     //the conversion rate between mmol/l and mg/dL
     //1 mmol/L = 18 mg/dL
-    private static final int conversionrate = 18;
+    private static final double conversionRate = 18.0;
 
-    public BGLType()
-    {}
-
-    public double get_mmol_per_L()
+    public BGLType(double initialBGL, BGLMeasurementEnum bglm )
     {
-       return bgl;
-    }
-    public set_mmol_per_L(double newBGL)
-    {
-       this.bgl = newBGL;
+        this.bglm = bglm;
+        setBGL(initialBGL);
     }
 
-    public double get_mg_per_dL()
+    public double getBGL()
     {
-        return bgl * conversionrate;
-    }
-    public get_mg_per_dL(double newBGL)
-    {
-       this.bgl = newBGL / conversionrate;
-    }
+        switch (bglm) 
+        {
+            case mmolL: 
+                return bgl;
 
+            case mgdL: 
+                return bgl * conversionRate;
+        }
+    }
+    public setBGL(double newBGL)
+    {
+        switch (bglm) 
+        {
+            case mmolL: 
+                this.bgl = newBGL;
+
+            case mgdL: 
+                this.bgl = newBGL / conversionRate;
+        }
+    }
 }
