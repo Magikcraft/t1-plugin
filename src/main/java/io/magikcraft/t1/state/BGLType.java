@@ -34,4 +34,6 @@ public class BGLType {
                 this.bgl = newBGL / conversionRate;
         }
     }
+    public enum BGLMeasurementEnum { mmolL, mgdL }  
+
 }
