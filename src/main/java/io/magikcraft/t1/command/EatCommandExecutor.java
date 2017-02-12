@@ -8,7 +8,6 @@ import org.bukkit.command.CommandSender;
  * Created by forward on 1/27/17.
  */
 public class EatCommandExecutor implements CommandExecutor {
-    @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         return false;
     }
